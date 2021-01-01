@@ -20,8 +20,8 @@ RUN chsh -s /bin/zsh
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 30 && \
     update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 30 && \
     update-alternatives --install /usr/bin/python python /usr/bin/python3.8 30 && \
-    update-alternatives --install /usr/bin/pypy pypy /usr/bin/pypy3 30 && \
-    update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 30
+    update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 30 && \
+    update-alternatives --install /usr/bin/pypy pypy /usr/bin/pypy3 30
 
 # online-judge-toolsのinstall
 RUN pip install online-judge-tools
