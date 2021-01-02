@@ -1,17 +1,17 @@
 version: '3'
 services:
-  dev
+  dev:
     build:
       context: .
       dockerfile: Dockerfile
-    
     # イメージ名を指定
     image: hinamimi/atcoder-test:dev
-
     # localとcontainer間のファイルを同期させる
     # ${local}:{container}
     volumes:
       - ../problems:/root/problems:cached
+      - ../.vscode/launch.json:/root/.vscode/launch.json
+
       - ~/.gitconfig:/root/.gitconfig
       - ~/.bashrc:/root/.bashrc
       - ~/.bash_profile:/root/.bash_profile
