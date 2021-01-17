@@ -12,6 +12,7 @@ services:
       - ../problems:/root/problems:cached
       - ../.vscode/launch.json:/root/.vscode/launch.json
 
+    # オプション これらのconfigファイルがなければコメントアウト
       - ~/.gitconfig:/root/.gitconfig
       - ~/.bashrc:/root/.bashrc
       - ~/.bash_profile:/root/.bash_profile
