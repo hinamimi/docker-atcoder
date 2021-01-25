@@ -5,6 +5,7 @@ FROM ubuntu
 RUN apt-get update && \
     apt-get install -y zsh && \
     apt-get install -y time && \
+    apt-get install -y tree && \
     apt-get install -y git && \
     apt-get install -y gcc-9 && \
     apt-get install -y g++-9 && \
@@ -36,6 +37,10 @@ RUN pip install numpy==1.18.2 && \
     pip install scikit-learn==0.22.2.post1 && \
     pip install numba==0.48.0 && \
     pip install networkx==2.4
+
+# Pythonでの競技プログラミング用データ構造をインストール
+RUN pip install git+https://github.com/not522/ac-library-python && \
+    pip install git+https://github.com/hinamimi/python-sortedcontainers
 
 # problems以下をworkdirにする
 WORKDIR /root/problems

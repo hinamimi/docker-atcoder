@@ -28,7 +28,8 @@
 		"ms-python.python",
 		"ms-python.vscode-pylance",
 		"ms-vscode.cpptools",
-		"zainchen.json"
+		"zainchen.json",
+		"visualstudioexptteam.vscodeintellicode"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
