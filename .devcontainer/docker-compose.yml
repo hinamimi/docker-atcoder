@@ -4,12 +4,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+
     # イメージ名を指定
     image: hinamimi/atcoder-test:dev
+
     # localとcontainer間のファイルを同期させる
     # ${local}:{container}
     volumes:
       - ../problems:/root/problems:cached
+      - ../acc-template-python:/root/.config/atcoder-cli-nodejs/python:cached
       - ../.vscode/launch.json:/root/.vscode/launch.json
 
     # オプション これらのconfigファイルがなければコメントアウト
