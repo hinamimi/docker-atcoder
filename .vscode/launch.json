@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "cwd":"${fileDirname}",
+            "cwd": "${fileDirname}",
             "console": "integratedTerminal",
             "args": [
                 "<",
@@ -21,7 +21,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "cwd":"${fileDirname}",
+            "cwd": "${fileDirname}",
             "console": "integratedTerminal",
             "args": [
                 "<",
@@ -33,7 +33,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "cwd":"${fileDirname}",
+            "cwd": "${fileDirname}",
             "console": "integratedTerminal",
             "args": [
                 "<",
@@ -41,14 +41,25 @@
             ]
         },
         {
+            "name": "Python: AtCoder Test4",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${fileDirname}",
+            "console": "integratedTerminal",
+            "args": [
+                "<",
+                "test/sample-4.in"
+            ]
+        },
+        {
             "name": "Python: Execute",
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "cwd":"${fileDirname}",
+            "cwd": "${fileDirname}",
             "console": "integratedTerminal",
             "args": []
         },
     ]
-    
 }

@@ -1,6 +1,6 @@
 {
   "task": {
-    "program": ["main.py", "{TaskLabel}"],
-    "submit": "*.py"
+    "program": [["main.py", "{tasklabel}.py"]],
+    "submit": "{tasklabel}.py"
   }
 }

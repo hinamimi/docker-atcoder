@@ -12,8 +12,9 @@ services:
     # ${local}:{container}
     volumes:
       - ../problems:/root/problems:cached
+      - ../library:/root/library:cached
       - ../acc-template-python:/root/.config/atcoder-cli-nodejs/python:cached
-      - ../.vscode/launch.json:/root/.vscode/launch.json
+      - ../.vscode:/root/.vscode:cached
 
     # オプション これらのconfigファイルがなければコメントアウト
       - ~/.gitconfig:/root/.gitconfig

@@ -54,3 +54,6 @@ RUN pip install numpy==1.18.2 && \
 # Pythonでの競技プログラミング用データ構造をインストール
 RUN pip install git+https://github.com/not522/ac-library-python && \
     pip install git+https://github.com/hinamimi/python-sortedcontainers
+
+WORKDIR /root/problems
+WORKDIR /root/library

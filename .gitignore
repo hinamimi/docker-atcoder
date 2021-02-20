@@ -4,3 +4,4 @@ problems/**
 !problems/practice/a.py
 !problems/practice/a_pypy.py
 !problems/practice/a.cpp
+library/**
