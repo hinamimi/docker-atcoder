@@ -32,7 +32,7 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 30 && \
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 30
 
 # コンテスト補助アプリケーションをインストール
-RUN pip install online-judge-tools
+RUN pip install online-judge-tools==11.1.3
 RUN npm install -g atcoder-cli
 
 # atcoder-cliの設定
@@ -52,7 +52,7 @@ RUN pip install numpy==1.18.2 && \
     pip install networkx==2.4
 
 # Pythonでの競技プログラミング用データ構造をインストール
-RUN pip install git+https://github.com/not522/ac-library-python && \
+RUN pip install git+https://github.com/hinamimi/ac-library-python && \
     pip install git+https://github.com/hinamimi/python-sortedcontainers
 
 WORKDIR /root/problems

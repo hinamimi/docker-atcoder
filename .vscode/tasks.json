@@ -16,6 +16,64 @@
             ]
         },
         {
+            "label": "Test Float(1e-5) - online-judge-tools: Python",
+            "type": "shell",
+            "command": "oj",
+            "args": [
+                "test",
+                "--command",
+                "\"python ${file}\"",
+                "--directory",
+                "${fileDirname}/test",
+                "--error",
+                "1e-5"
+            ]
+        },
+        {
+            "label": "Generate Input - online-judge-tools",
+            "type": "shell",
+            "command": "oj",
+            "args": [
+                "generate-input",
+                "\"python ${file}\"",
+                "--directory",
+                "${fileDirname}/test",
+            ]
+        },
+        {
+            "label": "Generate Output - online-judge-tools",
+            "type": "shell",
+            "command": "oj",
+            "args": [
+                "generate-output",
+                "--command",
+                "\"python ${file}\"",
+                "--directory",
+                "${fileDirname}/test",
+            ]
+        },
+        {
+            "label": "Delete In/Output - online-judge-tools",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "-rf",
+                "${fileDirname}/test/random-???.{in,out}",
+            ]
+        },
+        {
+            "label": "Join - AC-Library",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "atcoder",
+                "${file}",
+                "-o",
+                "${fileDirname}/joined-${fileBasename}"
+            ]
+        },
+        {
             "label": "Test - online-judge-tools: PyPy",
             "type": "shell",
             "command": "oj",
@@ -25,6 +83,20 @@
                 "\"pypy ${file}\"",
                 "--directory",
                 "${fileDirname}/test"
+            ]
+        },
+        {
+            "label": "Test Float(1e-5) - online-judge-tools: PyPy",
+            "type": "shell",
+            "command": "oj",
+            "args": [
+                "test",
+                "--command",
+                "\"pypy ${file}\"",
+                "--directory",
+                "${fileDirname}/test",
+                "--error",
+                "1e-5"
             ]
         },
     ]

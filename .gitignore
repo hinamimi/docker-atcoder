@@ -1,7 +1,2 @@
 problems/**
-!problems/atcoder-contest-setup.py
-!problems/practice/
-!problems/practice/a.py
-!problems/practice/a_pypy.py
-!problems/practice/a.cpp
 library/**
