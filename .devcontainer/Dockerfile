@@ -31,19 +31,6 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 30 && \
     update-alternatives --install /usr/bin/pypy pypy /usr/bin/pypy3 30 && \
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 30
 
-# コンテスト補助アプリケーションをインストール
-RUN pip install online-judge-tools==11.1.3
-RUN npm install -g atcoder-cli
-
-# atcoder-cliの設定
-RUN acc config-dir && \
-    acc config default-template python && \
-    acc config default-test-dirname-format test
-
-# C++でAtCoder Library(ACL)を使えるようにする
-RUN git clone https://github.com/atcoder/ac-library.git /lib/ac-library
-ENV CPLUS_INCLUDE_PATH /lib/ac-library
-
 # AtCoderでも使えるPythonライブラリをインストール
 RUN pip install numpy==1.18.2 && \
     pip install scipy==1.4.1 && \
@@ -51,9 +38,22 @@ RUN pip install numpy==1.18.2 && \
     pip install numba==0.48.0 && \
     pip install networkx==2.4
 
+# C++でAtCoder Library(ACL)を使えるようにする
+RUN git clone https://github.com/atcoder/ac-library.git /lib/ac-library
+ENV CPLUS_INCLUDE_PATH /lib/ac-library
+
 # Pythonでの競技プログラミング用データ構造をインストール
 RUN pip install git+https://github.com/hinamimi/ac-library-python && \
     pip install git+https://github.com/hinamimi/python-sortedcontainers
+
+# コンテスト補助アプリケーションをインストール
+RUN pip install online-judge-tools==11.3.0
+RUN npm install -g atcoder-cli@2.1.1
+
+# atcoder-cliの設定
+RUN acc config-dir && \
+    acc config default-template python && \
+    acc config default-test-dirname-format test
 
 WORKDIR /root/problems
 WORKDIR /root/library

@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
 
     # イメージ名を指定
-    image: hinamimi/atcoder-test:dev
+    image: hinamimi/atcoder:dev
 
     # localとcontainer間のファイルを同期させる
     # ${local}:{container}
@@ -22,6 +22,7 @@ services:
       - ~/.bash_profile:/root/.bash_profile
       - ~/.zshrc:/root/.zshrc
       - ~/.zprofile:/root/.zprofile
+      - ~/.zinit:/root/.zinit
       - ~/.aliases:/root/.aliases
 
     # Overrides default command so things don't shut down after the process ends.

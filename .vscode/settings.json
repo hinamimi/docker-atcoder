@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        ".aliases": "shellscript",
+        "iostream": "cpp"
+    }
+}
