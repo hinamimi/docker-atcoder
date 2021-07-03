@@ -133,7 +133,9 @@
                 "--command",
                 "\"pypy ${file}\"",
                 "--directory",
-                "${fileDirname}/test"
+                "${fileDirname}/test",
+                "--tle",
+                "4"
             ]
         },
         {
@@ -147,7 +149,9 @@
                 "--directory",
                 "${fileDirname}/test",
                 "--error",
-                "1e-5"
+                "1e-5",
+                "--tle",
+                "4"
             ]
         }
     ]
