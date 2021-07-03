@@ -7,7 +7,8 @@ RUN apt-get update && \
     apt-get install -y time && \
     apt-get install -y tzdata && \
     apt-get install -y tree && \
-    apt-get install -y git
+    apt-get install -y git && \
+    apt-get install -y curl
 
 # デフォルトシェルをZ shellにする
 RUN chsh -s /bin/zsh
@@ -54,6 +55,10 @@ RUN npm install -g atcoder-cli@2.1.1
 RUN acc config-dir && \
     acc config default-template python && \
     acc config default-test-dirname-format test
+
+# # AHC用のRustのinstall
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+ENV PATH $PATH:/home/root/.cargo/bin
 
 WORKDIR /root/problems
 WORKDIR /root/library
