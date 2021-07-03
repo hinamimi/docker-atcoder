@@ -9,14 +9,14 @@ services:
     image: hinamimi/atcoder:dev
 
     # localとcontainer間のファイルを同期させる
-    # ${local}:{container}
+    # ${local}:${container}
     volumes:
       - ../problems:/root/problems:cached
       - ../library:/root/library:cached
       - ../acc-template-python:/root/.config/atcoder-cli-nodejs/python:cached
       - ../.vscode:/root/.vscode:cached
 
-    # オプション これらのconfigファイルがなければコメントアウト
+    # オプション これらのconfigファイルが必要なければコメントアウト
       - ~/.gitconfig:/root/.gitconfig
       - ~/.bashrc:/root/.bashrc
       - ~/.bash_profile:/root/.bash_profile
