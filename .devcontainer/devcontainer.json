@@ -20,13 +20,14 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-python.python",
-		"ms-python.vscode-pylance",
-		"ms-vscode.cpptools",
-		"zainchen.json",
-		"visualstudioexptteam.vscodeintellicode",
-		"sanaajani.taskrunnercode"
-	]
+		"sanaajani.taskrunnercode", // Run tasks from Explorer pane
+		"ms-python.python", // Python IntelliSense (Microsoft)
+		"ms-python.vscode-pylance", // Python language server (Microsoft)
+		"ms-vscode.cpptools", // C/C++ IntelliSense (Microsoft)
+		"visualstudioexptteam.vscodeintellicode", // AI-assisted development (Microsoft)
+		"yzhang.markdown-all-in-one", // Markdown
+		"zainchen.json", // Json
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -37,8 +38,8 @@
 	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
 	// "shutdownAction": "none",
 
-	// Uncomment the next line to run commands after the container is created - for example installing curl.
-	// "postCreateCommand": "apt-get update && apt-get install -y curl",
+	// Run commands after the container is created.
+	"postCreateCommand": "pip3 install -U online-judge-tools",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
