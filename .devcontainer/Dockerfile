@@ -1,27 +1,21 @@
 # Ubuntuの公式コンテナを軸に環境構築
 FROM ubuntu
 
+# インタラクティブモードにならないようにする
+ARG DEBIAN_FRONTEND=noninteractive
+# タイムゾーンを日本に設定
+ENV TZ=Asia/Tokyo
+
 # インフラを整備
 RUN apt-get update && \
-    apt-get install -y zsh && \
-    apt-get install -y time && \
-    apt-get install -y tzdata && \
-    apt-get install -y tree && \
-    apt-get install -y git && \
-    apt-get install -y curl
+    apt-get install -y zsh time tzdata tree git curl
 
 # デフォルトシェルをZ shellにする
 RUN chsh -s /bin/zsh
 
 # C++, Python3, PyPy3の3つの環境想定
 RUN apt-get update && \
-    apt-get install -y gcc-9 && \
-    apt-get install -y g++-9 && \
-    apt-get install -y python3.8 && \
-    apt-get install -y python3-pip && \
-    apt-get install -y pypy3 && \
-    apt-get install -y nodejs && \
-    apt-get install -y npm
+    apt-get install -y gcc-9 g++-9 python3.8 python3-pip pypy3 nodejs npm
 
 # 一般的なコマンドで使えるように設定
 # e.g. python3.8 main.py => python main.py
