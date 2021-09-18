@@ -2,7 +2,7 @@
 FROM ubuntu
 
 # インタラクティブモードにならないようにする
-ARG DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 # タイムゾーンを日本に設定
 ENV TZ=Asia/Tokyo
 
@@ -27,11 +27,9 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 30 && \
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 30
 
 # AtCoderでも使えるPythonライブラリをインストール
-RUN pip install numpy==1.18.2 && \
-    pip install scipy==1.4.1 && \
-    pip install scikit-learn==0.22.2.post1 && \
-    pip install numba==0.48.0 && \
-    pip install networkx==2.4
+RUN pip install -U pip && \
+    pip install numpy==1.18.2 scipy==1.4.1 scikit-learn==0.22.2.post1 \
+    numba==0.48.0 networkx==2.4
 
 # C++でAtCoder Library(ACL)を使えるようにする
 RUN git clone https://github.com/atcoder/ac-library.git /lib/ac-library
@@ -41,18 +39,18 @@ ENV CPLUS_INCLUDE_PATH /lib/ac-library
 RUN pip install git+https://github.com/hinamimi/ac-library-python && \
     pip install git+https://github.com/hinamimi/python-sortedcontainers
 
+# AHC用のRustのinstall
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+ENV PATH $PATH:/home/root/.cargo/bin
+
 # コンテスト補助アプリケーションをインストール
-RUN pip install online-judge-tools==11.3.0
+RUN pip install online-judge-tools==11.4.0
 RUN npm install -g atcoder-cli@2.1.1
 
 # atcoder-cliの設定
 RUN acc config-dir && \
     acc config default-template python && \
     acc config default-test-dirname-format test
-
-# # AHC用のRustのinstall
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-ENV PATH $PATH:/home/root/.cargo/bin
 
 WORKDIR /root/problems
 WORKDIR /root/library

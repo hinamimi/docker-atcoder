@@ -125,6 +125,18 @@
             ]
         },
         {
+            "label": "Join - SortedContainers",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "sortedcontainers",
+                "${file}",
+                "-o",
+                "${fileDirname}/joined-${fileBasename}"
+            ]
+        },
+        {
             "label": "Test - online-judge-tools: PyPy",
             "type": "shell",
             "command": "oj",

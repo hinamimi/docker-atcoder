@@ -39,7 +39,7 @@
 	// "shutdownAction": "none",
 
 	// Run commands after the container is created.
-	"postCreateCommand": "pip3 install -U online-judge-tools",
+	"postCreateCommand": "pip install -U autopep8 online-judge-tools",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
