@@ -15,7 +15,7 @@ RUN chsh -s /bin/zsh
 
 # C++, Python3, PyPy3の3つの環境想定
 RUN apt-get update && \
-    apt-get install -y gcc-9 g++-9 python3.8 python3-pip pypy3 nodejs npm
+    apt-get install -y gcc-9 g++-9 gfortran python3.8 python3-pip pypy3 nodejs npm liblapack-dev llvm-7
 
 # 一般的なコマンドで使えるように設定
 # e.g. python3.8 main.py => python main.py
@@ -26,9 +26,12 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 30 && \
     update-alternatives --install /usr/bin/pypy pypy /usr/bin/pypy3 30 && \
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 30
 
+# LLVMのパスを設定
+ENV LLVM_CONFIG=/usr/lib/llvm-7/bin/llvm-config
 # AtCoderでも使えるPythonライブラリをインストール
 RUN pip install numpy==1.18.2 && \
     pip install scipy==1.4.1 && \
+    pip install cython && \
     pip install scikit-learn==0.22.2.post1 && \
     pip install numba==0.48.0 && \
     pip install networkx==2.4
