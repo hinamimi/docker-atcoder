@@ -2,45 +2,44 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.154.0/containers/docker-existing-docker-compose
 // If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
 {
-	"name": "AtCoder Environment",
+  "name": "AtCoder Environment",
 
-	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
-	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
-	"dockerComposeFile": [
-		"docker-compose.yml"
-	],
+  // Update the 'dockerComposeFile' list if you have more compose files or use different names.
+  // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+  "dockerComposeFile": ["docker-compose.yml"],
 
-	// The 'service' property is the name of the service for the container that VS Code should
-	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
-	"service": "dev",
+  // The 'service' property is the name of the service for the container that VS Code should
+  // use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+  "service": "dev",
 
-	// The optional 'workspaceFolder' property is the path VS Code should open by default when
-	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/root",
+  // The optional 'workspaceFolder' property is the path VS Code should open by default when
+  // connected. This is typically a file mount in .devcontainer/docker-compose.yml
+  "workspaceFolder": "/root",
 
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"sanaajani.taskrunnercode", // Run tasks from Explorer pane
-		"ms-python.python", // Python IntelliSense (Microsoft)
-		"ms-python.vscode-pylance", // Python language server (Microsoft)
-		"ms-vscode.cpptools", // C/C++ IntelliSense (Microsoft)
-		"visualstudioexptteam.vscodeintellicode", // AI-assisted development (Microsoft)
-		"yzhang.markdown-all-in-one", // Markdown
-		"zainchen.json", // Json
-	],
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "sanaajani.taskrunnercode", // Run tasks from Explorer pane
+    "ms-python.python", // Python IntelliSense (Microsoft)
+    "ms-python.vscode-pylance", // Python language server (Microsoft)
+    "ms-vscode.cpptools", // C/C++ IntelliSense (Microsoft)
+    "visualstudioexptteam.vscodeintellicode", // AI-assisted development (Microsoft)
+    "yzhang.markdown-all-in-one", // Markdown
+    "zainchen.json", // Json
+    "github.copilot" // AI pair programmer (GitHub)
+  ],
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	// Uncomment the next line if you want start specific services in your Docker Compose config.
-	// "runServices": [],
+  // Uncomment the next line if you want start specific services in your Docker Compose config.
+  // "runServices": [],
 
-	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
-	// "shutdownAction": "none",
+  // Uncomment the next line if you want to keep your containers running after VS Code shuts down.
+  // "shutdownAction": "none",
 
-	// Run commands after the container is created.
-	"postCreateCommand": "pip install -U autopep8 online-judge-tools",
+  // Run commands after the container is created.
+  "postCreateCommand": "pip install -U autopep8 online-judge-tools"
 
-	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode"
+  // Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+  // "remoteUser": "vscode"
 }

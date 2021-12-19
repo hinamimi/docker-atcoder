@@ -1,3 +1,4 @@
 problems/**
 library/**
 dotfiles/**
+.docker/*
