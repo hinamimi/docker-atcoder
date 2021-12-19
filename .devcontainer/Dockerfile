@@ -44,8 +44,8 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 ENV PATH $PATH:/home/root/.cargo/bin
 
 # コンテスト補助アプリケーションをインストール
-RUN pip install online-judge-tools==11.4.0
-RUN npm install -g atcoder-cli@2.1.1
+RUN pip install online-judge-tools==11.5.1
+RUN npm install -g atcoder-cli@2.2.0
 
 # atcoder-cliの設定
 RUN acc config-dir && \
