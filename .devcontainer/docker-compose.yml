@@ -13,7 +13,7 @@ services:
     volumes:
       - ../problems:/root/problems:cached
       - ../library:/root/library:cached
-      - ../acc-template-python:/root/.config/atcoder-cli-nodejs/python:cached
+      - ../atcoder-cli-nodejs:/root/.config/atcoder-cli-nodejs
       - ../.vscode:/root/.vscode:cached
 
     # オプション これらのconfigファイルが必要なければコメントアウト
@@ -21,6 +21,7 @@ services:
       - ../dotfiles/.zinit:/root/.zinit
       - ../dotfiles/.zsh_history:/root/.zsh_history
       - ../dotfiles/.aliases:/root/.aliases
+      - ../.login:/root/.login
 
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"

@@ -1,0 +1,8 @@
+{
+	"oj-path": "/usr/local/bin/oj",
+	"default-contest-dirname-format": "{ContestID}",
+	"default-task-dirname-format": "{tasklabel}",
+	"default-test-dirname-format": "test",
+	"default-task-choice": "inquire",
+	"default-template": "python"
+}

@@ -47,10 +47,5 @@ ENV PATH $PATH:/home/root/.cargo/bin
 RUN pip install online-judge-tools==11.5.1
 RUN npm install -g atcoder-cli@2.2.0
 
-# atcoder-cliの設定
-RUN acc config-dir && \
-    acc config default-template python && \
-    acc config default-test-dirname-format test
-
 WORKDIR /root/problems
 WORKDIR /root/library

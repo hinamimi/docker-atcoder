@@ -2,3 +2,5 @@ problems/**
 library/**
 dotfiles/**
 .docker/*
+.login/**
+atcoder-cli-nodejs/session.json
