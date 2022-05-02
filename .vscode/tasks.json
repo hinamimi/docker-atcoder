@@ -1,170 +1,168 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Test - online-judge-tools: Python",
-            "type": "shell",
-            "command": "oj",
-            "args": [
-                "test",
-                "--command",
-                "\"python ${file}\"",
-                "--directory",
-                "${fileDirname}/test",
-                "--tle",
-                "4"
-            ],
-            "problemMatcher": []
-        },
-        {
-            "label": "Test Float(1e-5) - online-judge-tools: Python",
-            "type": "shell",
-            "command": "oj",
-            "args": [
-                "test",
-                "--command",
-                "\"python ${file}\"",
-                "--directory",
-                "${fileDirname}/test",
-                "--error",
-                "1e-5",
-                "--tle",
-                "4"
-            ]
-        },
-        {
-            "label": "Test with judge.py - online-judge-tools: Python",
-            "type": "shell",
-            "command": "oj",
-            "args": [
-                "test",
-                "--command",
-                "\"python ${file}\"",
-                "--directory",
-                "${fileDirname}/test",
-                "--judge-command",
-                "\"python ${fileDirname}/judge.py\"",
-                "--tle",
-                "4"
-            ]
-        },
-        {
-            "label": "Submit - online-judge-tools: Python",
-            "type": "shell",
-            "command": "cd",
-            "args": [
-                "${fileDirname};",
-                "acc",
-                "submit",
-                "${file}",
-                "--",
-                "--no-open"
-            ],
-            "problemMatcher": []
-        },
-        {
-            "label": "Submit - online-judge-tools: PyPy",
-            "type": "shell",
-            "command": "cd",
-            "args": [
-                "${fileDirname};",
-                "acc",
-                "submit",
-                "${file}",
-                "--",
-                "--guess-python-interpreter",
-                "pypy",
-                "--no-open"
-            ],
-            "problemMatcher": []
-        },
-        {
-            "label": "Generate Input - online-judge-tools",
-            "type": "shell",
-            "command": "oj",
-            "args": [
-                "generate-input",
-                "\"python ${file}\"",
-                "--directory",
-                "${fileDirname}/test"
-            ]
-        },
-        {
-            "label": "Generate Output - online-judge-tools",
-            "type": "shell",
-            "command": "oj",
-            "args": [
-                "generate-output",
-                "--command",
-                "\"python ${file}\"",
-                "--directory",
-                "${fileDirname}/test"
-            ]
-        },
-        {
-            "label": "Delete In/Output - online-judge-tools",
-            "type": "shell",
-            "command": "rm",
-            "args": [
-                "-rf",
-                "${fileDirname}/test/random-???.{in,out}"
-            ]
-        },
-        {
-            "label": "Join - AC-Library",
-            "type": "shell",
-            "command": "python",
-            "args": [
-                "-m",
-                "atcoder",
-                "${file}",
-                "-o",
-                "${fileDirname}/joined-${fileBasename}"
-            ]
-        },
-        {
-            "label": "Join - SortedContainers",
-            "type": "shell",
-            "command": "python",
-            "args": [
-                "-m",
-                "sortedcontainers",
-                "${file}",
-                "-o",
-                "${fileDirname}/joined-${fileBasename}"
-            ]
-        },
-        {
-            "label": "Test - online-judge-tools: PyPy",
-            "type": "shell",
-            "command": "oj",
-            "args": [
-                "test",
-                "--command",
-                "\"pypy ${file}\"",
-                "--directory",
-                "${fileDirname}/test",
-                "--tle",
-                "4"
-            ]
-        },
-        {
-            "label": "Test Float(1e-5) - online-judge-tools: PyPy",
-            "type": "shell",
-            "command": "oj",
-            "args": [
-                "test",
-                "--command",
-                "\"pypy ${file}\"",
-                "--directory",
-                "${fileDirname}/test",
-                "--error",
-                "1e-5",
-                "--tle",
-                "4"
-            ]
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Test - online-judge-tools: Python",
+      "type": "shell",
+      "command": "oj",
+      "args": [
+        "test",
+        "--command",
+        "\"python ${file}\"",
+        "--directory",
+        "${fileDirname}/test",
+        "--tle",
+        "4"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Test Float(1e-5) - online-judge-tools: Python",
+      "type": "shell",
+      "command": "oj",
+      "args": [
+        "test",
+        "--command",
+        "\"python ${file}\"",
+        "--directory",
+        "${fileDirname}/test",
+        "--error",
+        "1e-5",
+        "--tle",
+        "4"
+      ]
+    },
+    {
+      "label": "Test with judge.py - online-judge-tools: Python",
+      "type": "shell",
+      "command": "oj",
+      "args": [
+        "test",
+        "--command",
+        "\"python ${file}\"",
+        "--directory",
+        "${fileDirname}/test",
+        "--judge-command",
+        "\"python ${fileDirname}/judge.py\"",
+        "--tle",
+        "4"
+      ]
+    },
+    {
+      "label": "Submit - online-judge-tools: Python",
+      "type": "shell",
+      "command": "cd",
+      "args": [
+        "${fileDirname};",
+        "acc",
+        "submit",
+        "${file}",
+        "--",
+        "--no-open"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Submit - online-judge-tools: PyPy",
+      "type": "shell",
+      "command": "cd",
+      "args": [
+        "${fileDirname};",
+        "acc",
+        "submit",
+        "${file}",
+        "--",
+        "--guess-python-interpreter",
+        "pypy",
+        "--no-open"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Input - online-judge-tools",
+      "type": "shell",
+      "command": "oj",
+      "args": [
+        "generate-input",
+        "\"python ${file}\"",
+        "--directory",
+        "${fileDirname}/test"
+      ]
+    },
+    {
+      "label": "Generate Output - online-judge-tools",
+      "type": "shell",
+      "command": "oj",
+      "args": [
+        "generate-output",
+        "--command",
+        "\"python ${file}\"",
+        "--directory",
+        "${fileDirname}/test"
+      ]
+    },
+    {
+      "label": "Delete In/Output - online-judge-tools",
+      "type": "shell",
+      "command": "rm",
+      "args": [
+        "-rf",
+        "${fileDirname}/test/random-???.{in,out}"
+      ]
+    },
+    {
+      "label": "Join - AC-Library",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "atcoder",
+        "${file}",
+        "-o",
+        "${fileDirname}/joined-${fileBasename}"
+      ]
+    },
+    {
+      "label": "Join - SortedContainers",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "sortedcontainers",
+        "${file}",
+        "-o",
+        "${fileDirname}/joined-${fileBasename}"
+      ]
+    },
+    {
+      "label": "Test - online-judge-tools: PyPy",
+      "type": "shell",
+      "command": "oj",
+      "args": [
+        "test",
+        "--command",
+        "\"pypy ${file}\"",
+        "--directory",
+        "${fileDirname}/test",
+        "--tle",
+        "4"
+      ]
+    },
+    {
+      "label": "Test Float(1e-5) - online-judge-tools: PyPy",
+      "type": "shell",
+      "command": "oj",
+      "args": [
+        "test",
+        "--command",
+        "\"pypy ${file}\"",
+        "--directory",
+        "${fileDirname}/test",
+        "--error",
+        "1e-5",
+        "--tle",
+        "4"
+      ]
+    }
+  ]
 }

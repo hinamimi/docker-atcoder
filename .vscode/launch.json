@@ -1,65 +1,62 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Python: AtCoder Test1",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "cwd": "${fileDirname}",
-            "console": "integratedTerminal",
-            "args": [
-                "<",
-                "test/sample-1.in"
-            ]
-        },
-        {
-            "name": "Python: AtCoder Test2",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "cwd": "${fileDirname}",
-            "console": "integratedTerminal",
-            "args": [
-                "<",
-                "test/sample-2.in"
-            ]
-        },
-        {
-            "name": "Python: AtCoder Test3",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "cwd": "${fileDirname}",
-            "console": "integratedTerminal",
-            "args": [
-                "<",
-                "test/sample-3.in"
-            ]
-        },
-        {
-            "name": "Python: AtCoder Test4",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "cwd": "${fileDirname}",
-            "console": "integratedTerminal",
-            "args": [
-                "<",
-                "test/sample-4.in"
-            ]
-        },
-        {
-            "name": "Python: Execute",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "cwd": "${fileDirname}",
-            "console": "integratedTerminal",
-            "args": []
-        },
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: AtCoder Test1",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "args": [
+        "<",
+        "test/sample-1.in"
+      ]
+    },
+    {
+      "name": "Python: AtCoder Test2",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "args": [
+        "<",
+        "test/sample-2.in"
+      ]
+    },
+    {
+      "name": "Python: AtCoder Test3",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "args": [
+        "<",
+        "test/sample-3.in"
+      ]
+    },
+    {
+      "name": "Python: AtCoder Test4",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "args": [
+        "<",
+        "test/sample-4.in"
+      ]
+    },
+    {
+      "name": "Python: Execute",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "args": []
+    },
+  ]
 }

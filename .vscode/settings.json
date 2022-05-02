@@ -1,6 +1,15 @@
 {
-    "files.associations": {
-        ".aliases": "shellscript",
-        "iostream": "cpp"
-    }
+  "files.associations": {
+    ".aliases": "shellscript",
+    "iostream": "cpp"
+  },
+  "python.formatting.blackPath": "/usr/local/bin/black",
+  "python.formatting.provider": "black",
+  "python.sortImports.path": "/usr/local/bin/isort",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true
+  },
 }
