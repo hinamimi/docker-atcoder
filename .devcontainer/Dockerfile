@@ -1,5 +1,6 @@
 # Ubuntuの公式コンテナを軸に環境構築
-FROM ubuntu
+# 22.04ではaptからpython3.8が入っていなかったので20.04で固定する
+FROM ubuntu:20.04
 
 # インタラクティブモードにならないようにする
 ENV DEBIAN_FRONTEND=noninteractive
