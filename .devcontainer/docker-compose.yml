@@ -16,7 +16,7 @@ services:
       - ../atcoder-cli-nodejs:/root/.config/atcoder-cli-nodejs
       - ../.vscode:/root/.vscode:cached
 
-    # オプション これらのconfigファイルが必要なければコメントアウト
+      # オプション これらのconfigファイルが必要なければコメントアウト
       - ../dotfiles/.zshrc:/root/.zshrc
       - ../dotfiles/.zinit:/root/.zinit
       - ../dotfiles/.zsh_history:/root/.zsh_history
