@@ -3,13 +3,16 @@
     ".aliases": "shellscript",
     "iostream": "cpp"
   },
+  // python configuration
   "python.formatting.blackPath": "/usr/local/bin/black",
   "python.formatting.provider": "black",
   "python.sortImports.path": "/usr/local/bin/isort",
+  "python.languageServer": "Pylance",
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
+    "editor.formatOnPaste": false,
     "editor.formatOnSave": true
   },
 }
