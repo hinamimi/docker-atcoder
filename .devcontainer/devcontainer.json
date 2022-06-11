@@ -1,9 +1,7 @@
 {
   "name": "AtCoder Environment",
-  "dockerComposeFile": [
-    "docker-compose.yml"
-  ],
-  "service": "dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "atcoder",
   "workspaceFolder": "/root",
   "extensions": [
     "sanaajani.taskrunnercode", // Run tasks from Explorer pane
@@ -15,9 +13,5 @@
     "zainchen.json", // Json
     "github.copilot" // AI pair programmer (GitHub)
   ],
-  "forwardPorts": [],
-  "runServices": [],
-  "shutdownAction": "none",
-  "postCreateCommand": "pip install -U pip online-judgetools; pip install isort black",
-  "remoteUser": "vscode"
+  "postCreateCommand": "pip install -U pip online-judge-tools; pip install isort black online-judge-verify-helper"
 }

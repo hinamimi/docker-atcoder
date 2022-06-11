@@ -50,13 +50,12 @@
       ]
     },
     {
-      "name": "Python: Execute",
+      "name": "Python: Current File",
       "type": "python",
       "request": "launch",
       "program": "${file}",
-      "cwd": "${fileDirname}",
       "console": "integratedTerminal",
-      "args": []
+      "justMyCode": true
     },
   ]
 }
